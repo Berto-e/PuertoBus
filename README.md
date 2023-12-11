@@ -12,4 +12,6 @@ Creemos firmemente en esta idea ya que a diferencia de otros proyectos de ingeni
 Por lo tanto, sentimos que es una oportunidad para mejorar nuestras capacidades como desarrolladores y poder solventar una necesidad real.
 
 ## Memoria de trabajo
+*Mockups*
+Página Web
 ![Mockup Página Web](https://github.com/Berto-e/PuertoBus/assets/65825564/68d9599a-db08-4f74-a092-dad5fa18250d)
