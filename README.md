@@ -1,8 +1,9 @@
 # PuertoBus
 
 1. Descripción del proyecto
-2. Tecnología utilizada
-3. Reflexión final
+2. Memoria de trabajo
+3. Tecnología utilizada
+4. Reflexión final
 
 ## Descripción del proyecto
 El proyecto consta de la creación y despliegue de una página web y una app para smartphones (Android/IOS) sobre el sistema de autobúses y líneas del Puerto de Santa María, Cádiz.
