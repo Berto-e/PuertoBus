@@ -5,7 +5,7 @@ const Hero = () => {
     return (    
         <View style={styles.container}>
             <Text>
-                
+                hola
             </Text>
         </View>
     );

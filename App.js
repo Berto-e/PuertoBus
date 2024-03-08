@@ -1,11 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Hero from './screens/Hero'
+import React from 'react';
+import { Provider as PaperProvider } from 'react-native-paper'; // Importa el Provider de react-native-paper
+import SearchMenu from './src/components/SearchMenu'; // Importa tu componente SearchMenu
 
-export default function App() {
+const App = () => {
   return (
-    <Hero></Hero>
+    <PaperProvider>
+      <SearchMenu />
+    </PaperProvider>
   );
-}
+};
 
-
+export default App;
