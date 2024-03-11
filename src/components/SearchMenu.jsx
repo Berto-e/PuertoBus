@@ -10,7 +10,7 @@ import {
 import { TextInput, Menu } from "react-native-paper";
 import { Calendar } from "react-native-calendars";
 
-import nucleosData from "../assets/Nucleos_Origen_Destino.json";
+import paradasData from "../data/paradas.json";
 
 const SearchMenu = () => {
   // Hooks
@@ -36,7 +36,7 @@ const SearchMenu = () => {
 
   // Función para filtrar las sugerencias de paradas de autobús
   const filterSuggestions = (text) => {
-    const filteredSuggestions = nucleosData.nucleos.filter((item) =>
+    const filteredSuggestions = paradasData.filter((item) =>
       item.toLowerCase().includes(text.toLowerCase())
     );
     setSuggestions(filteredSuggestions);
@@ -72,13 +72,13 @@ const SearchMenu = () => {
     >
       <View style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.title}>Bus Puerto</Text>
+          <Text style={styles.title}>Puerto Bus</Text>
           <Text style={styles.subtitle}>Introduce tu destino.</Text>
         </View>
         <View style={styles.inputs}>
           <TextInput
             style={styles.input}
-            placeholder="Introduce núcleo destino"
+            placeholder="Línea o parada (nombre o código)"
             value={destination}
             onChangeText={handleInputChange}
           />
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 16,
-    color: "gray",
+    color: "#009AF0",
   },
   inputs: {
     marginBottom: 20,
@@ -162,9 +162,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     paddingVertical: 12,
     paddingHorizontal: 32,
-    borderRadius: 20,
+    borderRadius: 0,
     elevation: 3,
-    backgroundColor: "#000",
+    backgroundColor: "#009AF0",
   },
 
   button_text: {
