@@ -1,10 +1,17 @@
+// screens/HomeScreen.js
 import React from 'react';
-import { View, Text } from 'react-native';
-import NavBar from '../components/NavBar';
+import { View, Text, Button } from 'react-native';
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
   return (
-      <NavBar/>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text style= {{ fontWeight: "bold", fontSize: 30}}>Home Screen</Text>
+
+      <Button
+        title="Go to Details"
+        onPress={() => navigation.navigate('Details')}
+      />
+    </View>
   );
 }
 

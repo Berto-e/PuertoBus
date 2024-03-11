@@ -1,12 +1,13 @@
+// App.js
 import React from "react";
-import { Provider as PaperProvider } from "react-native-paper"; // Importa el Provider de react-native-paper
-import SearchMenu from "./src/components/SearchMenu"; // Importa tu componente SearchMenu
-import HomeScreen from "./src/screens/HomeScreen";
+import { NavigationContainer } from "@react-navigation/native";
+import NavBar from "./src/navigation/NavBar";
 
 const App = () => {
   return (
-    
-   <HomeScreen/>
+    <NavigationContainer>
+      <NavBar />
+    </NavigationContainer>
   );
 };
 
