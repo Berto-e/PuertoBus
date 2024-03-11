@@ -5,11 +5,7 @@ import HomeScreen from "./src/screens/HomeScreen";
 
 const App = () => {
   return (
-    /*
-      <PaperProvider>
-        <SearchMenu />
-      </PaperProvider>
-    */
+    
    <HomeScreen/>
   );
 };
