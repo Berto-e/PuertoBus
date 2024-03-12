@@ -8,10 +8,6 @@ const DetailsScreen = ({ navigation }) => {
       {/* Este es tu menú de búsqueda */}
       <SearchMenu />
 
-      {/* Aquí colocamos el contenido debajo del menú */}
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'top' }}>
-        <Button title="Go back" onPress={() => navigation.goBack()} />
-      </View>
     </View>
   );
 };
