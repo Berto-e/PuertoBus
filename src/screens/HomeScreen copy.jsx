@@ -1,4 +1,5 @@
 import React from "react";
+import { createStackNavigator } from "@react-navigation/stack";
 import {
   View,
   Text,
@@ -7,13 +8,44 @@ import {
   ScrollView,
   TouchableOpacity,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native"; // Importa el hook de navegación
 
 // Icons
 import FontistoIcon from "react-native-vector-icons/Fontisto";
 import FontAwesome6Icon from "react-native-vector-icons/FontAwesome6";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
 
-const HomeScreen = ({ navigation }) => {
+// Screens
+import InfoUsuarioScreen from "./InfoUsuarioScreen";
+import TarifasScreen from "./TarifasScreen";
+import BusScreen from "./BusScreen";
+import DondeEstoyScreen from "./DondeEstoyScreen";
+import AvisosScreen from "./AvisosScreen";
+
+const Stack = createStackNavigator();
+
+const HomeScreen = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="HomeMain"
+        component={HomeMain}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen name="InfoUsuarioScreen" component={InfoUsuarioScreen} />
+      <Stack.Screen name="TarifasScreen" component={TarifasScreen} />
+      <Stack.Screen name="BusScreen" component={BusScreen} />
+      <Stack.Screen name="DondeEstoyScreen" component={DondeEstoyScreen} />
+      <Stack.Screen name="AvisosScreen" component={AvisosScreen} options={{
+        title: "Avisos"
+      }} />
+    </Stack.Navigator>
+  );
+};
+
+const HomeMain = () => {
+  const navigation = useNavigation();
+
   const navigateToScreen = (screenName) => {
     navigation.navigate(screenName);
   };
@@ -80,7 +112,7 @@ const HomeScreen = ({ navigation }) => {
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.box}
-            onPress={() => navigateToScreen("LineasBusScreen")}
+            onPress={() => navigateToScreen("AvisosScreen")}
           >
             <View style={styles.Iconcircle}>
               <MaterialCommunityIconsIcon
