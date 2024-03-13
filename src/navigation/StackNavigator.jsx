@@ -10,6 +10,8 @@ import DondeEstoyScreen from "../screens/DondeEstoyScreen";
 import AvisosScreen from "../screens/AvisosScreen";
 import LineasBusScreen from "../screens/LineasBusScreen";
 
+import DrawerNavigator from "./DrawerNavigator";
+
 const Stack = createStackNavigator();
 
 const MainStackNavigator = () => {
@@ -25,13 +27,13 @@ const MainStackNavigator = () => {
           fontWeight: "bold",
           fontSize: 20,
         },
-        gestureEnabled: true, // Habilita los gestos para la transición
+         gestureEnabled: true, // Habilita los gestos para la transición
         ...TransitionPresets.SlideFromRightIOS, // Configura la animación de transición
       }}
     >
       <Stack.Screen
         name="HomeScreen"
-        component={HomeScreen}
+        component={DrawerNavigator}
         options={{ headerShown: false }}
       />
       <Stack.Screen name="InfoUsuarioScreen" component={InfoUsuarioScreen} 

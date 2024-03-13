@@ -5,8 +5,9 @@ import {
   StyleSheet,
   Dimensions,
   ScrollView,
-  TouchableOpacity,
+  Pressable,
 } from "react-native";
+import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 
 // Icons
 import FontistoIcon from "react-native-vector-icons/Fontisto";
@@ -25,7 +26,7 @@ const HomeScreen = ({ navigation }) => {
     >
       <View style={styles.container}>
         <View style={styles.row}>
-          <TouchableOpacity
+          <Pressable
             style={styles.box}
             onPress={() => navigateToScreen("InfoUsuarioScreen")}
           >
@@ -36,8 +37,8 @@ const HomeScreen = ({ navigation }) => {
             <Text style={styles.boxSubTitle}>
               Consulta la información disponible para el usuario
             </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
+          </Pressable>
+          <Pressable
             style={styles.box}
             onPress={() => navigateToScreen("TarifasScreen")}
           >
@@ -48,8 +49,8 @@ const HomeScreen = ({ navigation }) => {
             <Text style={styles.boxSubTitle}>
               Consulta los precios de las tarifas disponibles
             </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
+          </Pressable>
+          <Pressable
             style={styles.box}
             onPress={() => navigateToScreen("BusScreen")}
           >
@@ -61,8 +62,8 @@ const HomeScreen = ({ navigation }) => {
               Busca las paradas que necesites y accede a la información
               disponible
             </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
+          </Pressable>
+          <Pressable
             style={styles.box}
             onPress={() => navigateToScreen("DondeEstoyScreen")}
           >
@@ -77,8 +78,8 @@ const HomeScreen = ({ navigation }) => {
             <Text style={styles.boxSubTitle}>
               Te mostraremos las paradas mas cercanas
             </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
+          </Pressable>
+          <Pressable
             style={styles.box}
             onPress={() => navigateToScreen("LineasBusScreen")}
           >
@@ -93,8 +94,8 @@ const HomeScreen = ({ navigation }) => {
             <Text style={styles.boxSubTitle}>
               Líneas de bus con sus horarios y paradas
             </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
+          </Pressable>
+          <Pressable
             style={styles.box}
             onPress={() => navigateToScreen("AvisosScreen")}
           >
@@ -109,7 +110,7 @@ const HomeScreen = ({ navigation }) => {
             <Text style={styles.boxSubTitle}>
               Afectaciones en el servicio y recomendaciones
             </Text>
-          </TouchableOpacity>
+          </Pressable>
         </View>
       </View>
     </ScrollView>
@@ -159,17 +160,18 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
+    padding: 10,
   },
   boxTitle: {
     color: "#000", // Cambiar color de texto para que sea visible
     fontWeight: "bold",
-    fontSize: 20,
+    fontSize: RFPercentage(2),
     textAlign: "center",
   },
   boxSubTitle: {
     color: "#696969",
     fontWeight: "bold",
-    fontSize: 15,
+    fontSize: RFPercentage(1.5),
     textAlign: "center",
   },
 });
