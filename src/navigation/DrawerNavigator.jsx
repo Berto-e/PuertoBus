@@ -1,22 +1,23 @@
 // DrawerNavigator.js
 import * as React from "react";
-import { createDrawerNavigator } from "@react-navigation/drawer";
-import { MainStackNavigator } from "./StackNavigator";
+import {
+  DrawerContentScrollView,
+  createDrawerNavigator,
+} from "@react-navigation/drawer";
 import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
-
+import { Pressable, Text } from "react-native";
+import { TouchableOpacity } from "react-native";
 // Screens
-import DetailsScreen from "../screens/DetailsScreen";
-import TarifasScreen from "../screens/TarifasScreen";
 import HomeScreen from "../screens/HomeScreen";
+import TarifasScreen from "../screens/TarifasScreen";
 
 const Drawer = createDrawerNavigator();
 
 const DrawerNavigator = () => {
-  
   return (
-   
     <Drawer.Navigator
-      initialRouteName="HomeScreen"
+      drawerContent={(props) => <DrawerMenu {...props} />}
+      initialRouteName="Home"
       screenOptions={{
         headerStyle: {
           backgroundColor: "#009AF0", // Cambiar el color de fondo de la barra de navegación
@@ -30,11 +31,30 @@ const DrawerNavigator = () => {
 
         headerTitle: "Puerto Bus", // Título global para todos los screens del Drawer Navigator
       }}
+      
     >
-      <Drawer.Screen name="Home" component={HomeScreen} />
-      <Drawer.Screen name="Tarifas" component={TarifasScreen} />
+      <Drawer.Screen
+      name = "Home"
+      component={HomeScreen}>
+      
+      </Drawer.Screen>
+      
     </Drawer.Navigator>
   );
 };
 
+const DrawerMenu = ({ navigation }) => {
+  return (
+    <DrawerContentScrollView>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.toggleDrawer();
+          navigation.navigate('TarifasScreen'); // Utiliza el nombre de la pantalla en lugar del nombre del componente
+        }}
+      >
+        <Text>TarifasScreen</Text>
+      </TouchableOpacity>
+    </DrawerContentScrollView>
+  );
+};
 export default DrawerNavigator;

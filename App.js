@@ -6,7 +6,7 @@ import { MainStackNavigator } from "./src/navigation/StackNavigator";
 
 
 const App = () => {
-  const [homeScreenIsActive, sethomeScreenIsActive] = useState(true);
+ 
   
   return (
     

@@ -8,22 +8,29 @@ import {
   Pressable,
 } from "react-native";
 import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
+import { Drawer } from 'react-native-paper';
 
 // Icons
 import FontistoIcon from "react-native-vector-icons/Fontisto";
 import FontAwesome6Icon from "react-native-vector-icons/FontAwesome6";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
 
+
 const HomeScreen = ({ navigation }) => {
   const navigateToScreen = (screenName) => {
     navigation.navigate(screenName);
   };
+ 
 
   return (
+   
+    
     <ScrollView
       contentContainerStyle={styles.scrollViewContainer}
       showsVerticalScrollIndicator={false}
     >
+      
+      
       <View style={styles.container}>
         <View style={styles.row}>
           <Pressable

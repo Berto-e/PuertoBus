@@ -2,14 +2,14 @@ import React from "react";
 import { createStackNavigator, TransitionPresets } from "@react-navigation/stack";
 
 // Screens
-import HomeScreen from "../screens/HomeScreen";
+
 import InfoUsuarioScreen from "../screens/InfoUsuarioScreen";
 import TarifasScreen from "../screens/TarifasScreen";
 import BusScreen from "../screens/BusScreen";
 import DondeEstoyScreen from "../screens/DondeEstoyScreen";
 import AvisosScreen from "../screens/AvisosScreen";
 import LineasBusScreen from "../screens/LineasBusScreen";
-
+import HomeScreen from "../screens/HomeScreen";
 import DrawerNavigator from "./DrawerNavigator";
 
 const Stack = createStackNavigator();
@@ -17,6 +17,7 @@ const Stack = createStackNavigator();
 const MainStackNavigator = () => {
   return (
     <Stack.Navigator
+    initialRouteName="DrawerNavigator"
       screenOptions={{
         headerStyle: {
           backgroundColor: "#009AF0", // Cambiar el color de fondo de la barra de navegación
@@ -32,7 +33,7 @@ const MainStackNavigator = () => {
       }}
     >
       <Stack.Screen
-        name="HomeScreen"
+        name="DrawerNavigator"
         component={DrawerNavigator}
         options={{ headerShown: false }}
       />
@@ -66,5 +67,7 @@ const MainStackNavigator = () => {
     </Stack.Navigator>
   );
 };
+
+
 
 export { MainStackNavigator };
