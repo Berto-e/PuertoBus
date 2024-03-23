@@ -8,33 +8,30 @@ import {
   Pressable,
 } from "react-native";
 import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
-import { Drawer } from 'react-native-paper';
+
 
 // Icons
 import FontistoIcon from "react-native-vector-icons/Fontisto";
 import FontAwesome6Icon from "react-native-vector-icons/FontAwesome6";
 import MaterialCommunityIconsIcon from "react-native-vector-icons/MaterialCommunityIcons";
 
-
 const HomeScreen = ({ navigation }) => {
   const navigateToScreen = (screenName) => {
     navigation.navigate(screenName);
   };
- 
 
   return (
-   
-    
     <ScrollView
       contentContainerStyle={styles.scrollViewContainer}
       showsVerticalScrollIndicator={false}
     >
-      
-      
       <View style={styles.container}>
         <View style={styles.row}>
           <Pressable
-            style={styles.box}
+            style={({ pressed }) => [
+              { opacity: pressed ? 0.5 : 1.0 },
+              styles.box
+            ]}
             onPress={() => navigateToScreen("InfoUsuarioScreen")}
           >
             <View style={styles.Iconcircle}>
@@ -46,7 +43,10 @@ const HomeScreen = ({ navigation }) => {
             </Text>
           </Pressable>
           <Pressable
-            style={styles.box}
+            style={({ pressed }) => [
+              { opacity: pressed ? 0.5 : 1.0 },
+              styles.box
+            ]}
             onPress={() => navigateToScreen("TarifasScreen")}
           >
             <View style={styles.Iconcircle}>
@@ -58,7 +58,10 @@ const HomeScreen = ({ navigation }) => {
             </Text>
           </Pressable>
           <Pressable
-            style={styles.box}
+            style={({ pressed }) => [
+              { opacity: pressed ? 0.5 : 1.0 },
+              styles.box
+            ]}
             onPress={() => navigateToScreen("BusScreen")}
           >
             <View style={styles.Iconcircle}>
@@ -71,7 +74,10 @@ const HomeScreen = ({ navigation }) => {
             </Text>
           </Pressable>
           <Pressable
-            style={styles.box}
+            style={({ pressed }) => [
+              { opacity: pressed ? 0.5 : 1.0 },
+              styles.box
+            ]}
             onPress={() => navigateToScreen("DondeEstoyScreen")}
           >
             <View style={styles.Iconcircle}>
@@ -87,7 +93,10 @@ const HomeScreen = ({ navigation }) => {
             </Text>
           </Pressable>
           <Pressable
-            style={styles.box}
+            style={({ pressed }) => [
+              { opacity: pressed ? 0.5 : 1.0 },
+              styles.box
+            ]}
             onPress={() => navigateToScreen("LineasBusScreen")}
           >
             <View style={styles.Iconcircle}>
@@ -103,7 +112,10 @@ const HomeScreen = ({ navigation }) => {
             </Text>
           </Pressable>
           <Pressable
-            style={styles.box}
+            style={({ pressed }) => [
+              { opacity: pressed ? 0.5 : 1.0 },
+              styles.box
+            ]}
             onPress={() => navigateToScreen("AvisosScreen")}
           >
             <View style={styles.Iconcircle}>
@@ -178,7 +190,7 @@ const styles = StyleSheet.create({
   boxSubTitle: {
     color: "#696969",
     fontWeight: "bold",
-    fontSize: RFPercentage(1.5),
+    fontSize: RFPercentage(1.6),
     textAlign: "center",
   },
 });
