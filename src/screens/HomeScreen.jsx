@@ -35,7 +35,7 @@ const HomeScreen = ({ navigation }) => {
             onPress={() => navigateToScreen("InfoUsuarioScreen")}
           >
             <View style={styles.Iconcircle}>
-              <FontistoIcon name="info" size={30} color="#009AF0" />
+              <FontistoIcon name="info" size={33} color="#009AF0" />
             </View>
             <Text style={styles.boxTitle}>Info Usuario</Text>
             <Text style={styles.boxSubTitle}>
@@ -50,7 +50,7 @@ const HomeScreen = ({ navigation }) => {
             onPress={() => navigateToScreen("TarifasScreen")}
           >
             <View style={styles.Iconcircle}>
-              <FontistoIcon name="ticket" size={30} color="#009AF0" />
+              <FontistoIcon name="ticket" size={33} color="#009AF0" />
             </View>
             <Text style={styles.boxTitle}>Tarifas</Text>
             <Text style={styles.boxSubTitle}>
@@ -65,7 +65,7 @@ const HomeScreen = ({ navigation }) => {
             onPress={() => navigateToScreen("BusScreen")}
           >
             <View style={styles.Iconcircle}>
-              <FontistoIcon name="bus" size={30} color="#009AF0" />
+              <FontistoIcon name="bus" size={33} color="#009AF0" />
             </View>
             <Text style={styles.boxTitle}>Bus</Text>
             <Text style={styles.boxSubTitle}>
@@ -83,7 +83,7 @@ const HomeScreen = ({ navigation }) => {
             <View style={styles.Iconcircle}>
               <FontAwesome6Icon
                 name="location-crosshairs"
-                size={30}
+                size={33}
                 color="#009AF0"
               />
             </View>
@@ -102,7 +102,7 @@ const HomeScreen = ({ navigation }) => {
             <View style={styles.Iconcircle}>
               <MaterialCommunityIconsIcon
                 name="bus-stop"
-                size={30}
+                size={33}
                 color="#009AF0"
               />
             </View>
@@ -121,7 +121,7 @@ const HomeScreen = ({ navigation }) => {
             <View style={styles.Iconcircle}>
               <MaterialCommunityIconsIcon
                 name="bell-alert"
-                size={30}
+                size={33}
                 color="#009AF0"
               />
             </View>
@@ -152,9 +152,9 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    justifyContent: "flex-start",
     alignItems: "flex-start",
-    padding: 10,
+    paddingVertical:10,
+    margin:10,
   },
   row: {
     flexDirection: "row",
@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFFF",
     marginBottom: 20, // Espacio entre las cajas
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "flex-start",
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -184,13 +184,13 @@ const styles = StyleSheet.create({
   boxTitle: {
     color: "#000", // Cambiar color de texto para que sea visible
     fontWeight: "bold",
-    fontSize: RFPercentage(2),
+    fontSize: RFPercentage(2.3),
     textAlign: "center",
   },
   boxSubTitle: {
     color: "#696969",
     fontWeight: "bold",
-    fontSize: RFPercentage(1.6),
+    fontSize: RFPercentage(2),
     textAlign: "center",
   },
 });

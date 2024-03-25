@@ -22,9 +22,11 @@ const TarifasScreen = ({ navigation }) => {
       showsVerticalScrollIndicator={false}
     >
       <View style={styles.containerSection}>
+        <View style={{marginHorizontal:10}}>
         <Text style={styles.text}>Billete sencillo</Text>
         <View style={{ flexDirection: "row", alignItems: "center" }}>
           <Text style={styles.price}>1,20€</Text>
+        </View>
         </View>
       </View>
       <Divider style={{ marginVertical: 5, width: "100%" }} />
@@ -212,6 +214,7 @@ const styles = StyleSheet.create({
   containerSection: {
     padding: 10,
     alignItems: "flex-start",
+   
   },
   text: {
     fontSize: RFPercentage(2.3),

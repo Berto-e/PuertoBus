@@ -61,7 +61,7 @@ const bonoTarjeta30DiasOrdinario = () => {
         Tarjeta mensual idónea para aquellas personas que utilizan los autobuses
         urbanos con gran frecuencia, permitirá un número de desplazamientos
         ilimitados en todas las líneas, con una validez de 30 días consecutivos
-        desde el día de la primera cancelación. Será un titulo personalizado
+        desde el día de la primera cancelación. {"\n"}Será un titulo personalizado
         mediante fotografía en la propia tarjeta expedida por el operador.
       </Text>
     </View>

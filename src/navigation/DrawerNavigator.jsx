@@ -30,7 +30,7 @@ const DrawerNavigator = () => {
         headerTitleAlign: "center",
         headerTitleStyle: {
           fontWeight: "bold",
-          fontSize: RFPercentage(2),
+          fontSize: RFPercentage(3),
         },
         headerTitle: "Puerto Bus",
       }}
@@ -140,22 +140,16 @@ const DrawerMenu = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   drawerContainer: {
-    
     alignItems: "flex-start",
     flex: 1,
     padding: 0,
-   
   },
   pressableContainer: {
-    width:"100%",
-    
     flexDirection: "row",
     alignItems: "center",
     paddingVertical: 15,
-    flexWrap:"wrap",
   },
   iconContainer: {
-    
     width: 30, // Ancho fijo del contenedor de icono
     alignItems: "left", // Alinear iconos al centro verticalmente
     marginLeft: 10,
@@ -166,7 +160,6 @@ const styles = StyleSheet.create({
     marginLeft: 20, // Espacio entre icono y texto
   },
   pressableSecondaryText: {
-    width: "70%",
     fontSize: RFPercentage(2),
     fontWeight: "bold",
     marginLeft: 20, // Espacio entre icono y texto
