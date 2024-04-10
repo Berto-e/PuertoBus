@@ -120,7 +120,13 @@ const DrawerMenu = ({ navigation }) => {
             navigation.navigate("InfoUsuarioScreen");
           }}
         >
-          <Text style={styles.pressableSecondaryText}>
+          <Text
+            style={{
+              fontSize: RFPercentage(2),
+              marginHorizontal: 40,
+              color: "#999999",
+            }}
+          >
             Política de privacidad
           </Text>
         </Pressable>
@@ -148,6 +154,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     paddingVertical: 15,
+    flexWrap: "wrap",
   },
   iconContainer: {
     width: 30, // Ancho fijo del contenedor de icono
@@ -155,14 +162,11 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   pressableMainText: {
-    fontSize: RFPercentage(1.7),
-    fontWeight: "bold",
+    fontSize: RFPercentage(2),
     marginLeft: 20, // Espacio entre icono y texto
   },
   pressableSecondaryText: {
-    fontSize: RFPercentage(2),
-    fontWeight: "bold",
-    marginLeft: 20, // Espacio entre icono y texto
+    fontSize: RFPercentage(1.7),
     color: "#999999",
   },
 });

@@ -20,6 +20,7 @@ const HomeScreen = ({ navigation }) => {
     navigation.navigate(screenName);
   };
 
+
   return (
     <ScrollView
       contentContainerStyle={styles.scrollViewContainer}
@@ -35,7 +36,7 @@ const HomeScreen = ({ navigation }) => {
             onPress={() => navigateToScreen("InfoUsuarioScreen")}
           >
             <View style={styles.Iconcircle}>
-              <FontistoIcon name="info" size={33} color="#009AF0" />
+              <FontistoIcon name="info" size={33} color="black" />
             </View>
             <Text style={styles.boxTitle}>Info Usuario</Text>
             <Text style={styles.boxSubTitle}>
@@ -50,7 +51,7 @@ const HomeScreen = ({ navigation }) => {
             onPress={() => navigateToScreen("TarifasScreen")}
           >
             <View style={styles.Iconcircle}>
-              <FontistoIcon name="ticket" size={33} color="#009AF0" />
+              <FontistoIcon name="ticket" size={33} color="black" />
             </View>
             <Text style={styles.boxTitle}>Tarifas</Text>
             <Text style={styles.boxSubTitle}>
@@ -65,12 +66,11 @@ const HomeScreen = ({ navigation }) => {
             onPress={() => navigateToScreen("BusScreen")}
           >
             <View style={styles.Iconcircle}>
-              <FontistoIcon name="bus" size={33} color="#009AF0" />
+              <FontistoIcon name="bus" size={33} color="black" />
             </View>
             <Text style={styles.boxTitle}>Bus</Text>
             <Text style={styles.boxSubTitle}>
-              Busca las paradas que necesites y accede a la información
-              disponible
+              Busca las paradas que necesites
             </Text>
           </Pressable>
           <Pressable
@@ -84,7 +84,7 @@ const HomeScreen = ({ navigation }) => {
               <FontAwesome6Icon
                 name="location-crosshairs"
                 size={33}
-                color="#009AF0"
+                color="black"
               />
             </View>
             <Text style={styles.boxTitle}>Dónde estoy</Text>
@@ -103,7 +103,7 @@ const HomeScreen = ({ navigation }) => {
               <MaterialCommunityIconsIcon
                 name="bus-stop"
                 size={33}
-                color="#009AF0"
+                color="black"
               />
             </View>
             <Text style={styles.boxTitle}>Líneas de bus</Text>
@@ -122,7 +122,7 @@ const HomeScreen = ({ navigation }) => {
               <MaterialCommunityIconsIcon
                 name="bell-alert"
                 size={33}
-                color="#009AF0"
+                color="black"
               />
             </View>
             <Text style={styles.boxTitle}>Avisos de servicio</Text>
@@ -141,6 +141,7 @@ const windowWidth = Dimensions.get("window").width;
 const styles = StyleSheet.create({
   scrollViewContainer: {
     flexGrow: 1,
+    
   },
   Iconcircle: {
     width: 60,
@@ -153,29 +154,31 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "flex-start",
-    paddingVertical:10,
-    margin:10,
+    paddingVertical:15,
+    padding: 15,
+
+   
   },
   row: {
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "space-between", // Espacio entre las cajas
-    width: windowWidth - 20, // Ancho igual al ancho de la pantalla menos el padding
-    marginTop: 10,
+    width: windowWidth - 30, // Ancho igual al ancho de la pantalla menos el padding
+  
   },
   box: {
     width: "47%", // Ancho de cada cajita
     height: 230,
     backgroundColor: "#FFFF",
-    marginBottom: 20, // Espacio entre las cajas
+    marginBottom: 15, // Espacio entre las cajas
     alignItems: "center",
-    justifyContent: "flex-start",
+    justifyContent: "center",
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
       height: 2,
     },
-    borderRadius: 15,
+    borderRadius: 5,
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
@@ -183,15 +186,17 @@ const styles = StyleSheet.create({
   },
   boxTitle: {
     color: "#000", // Cambiar color de texto para que sea visible
-    fontWeight: "bold",
-    fontSize: RFPercentage(2.3),
+    fontWeight:"600",
+    fontSize: RFPercentage(2.6),
     textAlign: "center",
+    marginBottom:10,
+    
   },
   boxSubTitle: {
     color: "#696969",
-    fontWeight: "bold",
-    fontSize: RFPercentage(2),
+    fontSize: RFPercentage(1.8),
     textAlign: "center",
+    
   },
 });
 
